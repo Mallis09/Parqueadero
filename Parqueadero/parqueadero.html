@@ -1,69 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Maricela Hernandez">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estacionamiento Premium</title>
-    <link rel="stylesheet" href="./parqueadero.css">
+
+    <link rel="stylesheet" href="parqueadero.css">
 </head>
+
 <body>
 
 <main class="parking-card">
+
     <header class="card-header">
         <h1>✨ HITSS Parking Service</h1>
         <p>Gestión y liquidación de tarifas</p>
     </header>
 
-    <div class="form-body">
-        <!-- Paso 1: Datos del Vehículo -->
+    <section class="form-body">
+
+        <!-- Información del Vehículo -->
         <fieldset class="form-group">
             <legend>Información del Vehículo</legend>
-            <div class="field">
-                <label for="selectTipo">Categoría</label>
-                <select id="selectTipo">
-                    <option value="Automovil">🚗 Automóvil</option>
-                    <option value="Moto">🏍️ Motocicleta</option>
-                </select>
-            </div>
-            
-            <div class="field">
-                <label for="inputPlaca">Número de Placa</label>
-                <input type="text" id="inputPlaca" placeholder="Ej. ABC123">
-            </div>
+
+            <label for="selectTipo">Categoría</label>
+            <select id="selectTipo">
+                <option value="Automovil">🚗 Automóvil</option>
+                <option value="Moto">🏍️ Motocicleta</option>
+            </select>
+
+            <label for="inputPlaca">Número de Placa</label>
+            <input type="text" id="inputPlaca" placeholder="Ej. ABC123">
         </fieldset>
 
-        <!-- Paso 2: Tiempos -->
+        <!-- Registro de tiempos -->
         <fieldset class="form-group">
             <legend>Registro de Tiempos</legend>
-            <div class="field">
-                <label for="horaIngreso">Momento de Entrada</label>
-                <input type="datetime-local" id="horaIngreso">
-            </div>
-            
-            <div class="field">
-                <label for="horaSalida">Momento de Salida</label>
-                <input type="datetime-local" id="horaSalida">
-            </div>
+
+            <label for="horaIngreso">Momento de Entrada</label>
+            <input type="datetime-local" id="horaIngreso">
+
+            <label for="horaSalida">Momento de Salida</label>
+            <input type="datetime-local" id="horaSalida">
         </fieldset>
 
-        <button id="actionCalcular" class="btn btn-primary">Generar Liquidación</button>
+        <button id="actionCalcular" class="btn btn-primary">
+            Generar Liquidación
+        </button>
 
-        <!-- Paso 3: Pago -->
+        <!-- Pago -->
         <fieldset class="form-group block-pago">
             <legend>Caja de Pago</legend>
-            <div class="field">
-                <label for="montoEfectivo">Efectivo Recibido ($)</label>
-                <input type="number" id="montoEfectivo" placeholder="0">
-            </div>
+
+            <label for="montoEfectivo">Efectivo Recibido ($)</label>
+            <input type="number" id="montoEfectivo" placeholder="0">
         </fieldset>
 
-        <button id="actionPagar" class="btn btn-secondary">Procesar Pago</button>
+        <button id="actionPagar" class="btn btn-secondary">
+            Procesar Pago
+        </button>
 
-        <!-- Pantalla de Estado -->
-        <div id="panelConsola" class="panel-status dynamic-hide"></div>
-    </div>
+        <!-- Estado -->
+        <section id="panelConsola" class="panel-status dynamic-hide"></section>
+
+    </section>
+
 </main>
 
-<script src="./parqueadero.js"></script>
+<script src="parqueadero.js"></script>
+
 </body>
 </html>
