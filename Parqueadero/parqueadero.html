@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estacionamiento Premium</title>
+    <link rel="stylesheet" href="./parqueadero.css">
+</head>
+<body>
+
+<main class="parking-card">
+    <header class="card-header">
+        <h1>✨ HITSS Parking Service</h1>
+        <p>Gestión y liquidación de tarifas</p>
+    </header>
+
+    <div class="form-body">
+        <!-- Paso 1: Datos del Vehículo -->
+        <fieldset class="form-group">
+            <legend>Información del Vehículo</legend>
+            <div class="field">
+                <label for="selectTipo">Categoría</label>
+                <select id="selectTipo">
+                    <option value="Automovil">🚗 Automóvil</option>
+                    <option value="Moto">🏍️ Motocicleta</option>
+                </select>
+            </div>
+            
+            <div class="field">
+                <label for="inputPlaca">Número de Placa</label>
+                <input type="text" id="inputPlaca" placeholder="Ej. ABC123">
+            </div>
+        </fieldset>
+
+        <!-- Paso 2: Tiempos -->
+        <fieldset class="form-group">
+            <legend>Registro de Tiempos</legend>
+            <div class="field">
+                <label for="horaIngreso">Momento de Entrada</label>
+                <input type="datetime-local" id="horaIngreso">
+            </div>
+            
+            <div class="field">
+                <label for="horaSalida">Momento de Salida</label>
+                <input type="datetime-local" id="horaSalida">
+            </div>
+        </fieldset>
+
+        <button id="actionCalcular" class="btn btn-primary">Generar Liquidación</button>
+
+        <!-- Paso 3: Pago -->
+        <fieldset class="form-group block-pago">
+            <legend>Caja de Pago</legend>
+            <div class="field">
+                <label for="montoEfectivo">Efectivo Recibido ($)</label>
+                <input type="number" id="montoEfectivo" placeholder="0">
+            </div>
+        </fieldset>
+
+        <button id="actionPagar" class="btn btn-secondary">Procesar Pago</button>
+
+        <!-- Pantalla de Estado -->
+        <div id="panelConsola" class="panel-status dynamic-hide"></div>
+    </div>
+</main>
+
+<script src="./parqueadero.js"></script>
+</body>
+</html>
